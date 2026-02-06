@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ar" dir="rtl"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Spine Clinic - ODI Score&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; padding: 20px; max-width: 800px; margin: auto; color: #333; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.header { text-align: center; margin-bottom: 30px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.header h1 { color: #2c3e50; margin-bottom: 5px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid #e1e4e8; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h3 { color: #1a73e8; margin-top: 0; border-bottom: 2px solid #f0f2f5; padding-bottom: 15px; font-size: 1.3em; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.input-field { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1.1em; margin-top: 10px; box-sizing: border-box; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.option { display: flex; align-items: flex-start; padding: 12px; border: 2px solid transparent; margin-bottom: 8px; border-radius: 8px; cursor: pointer; transition: all 0.2s; background-color: #fafafa; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.option:hover { background-color: #e8f0fe; border-color: #d2e3fc; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.option input { margin-left: 15px; margin-top: 5px; transform: scale(1.3); }</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.ar-text { font-weight: bold; font-size: 1.1em; display: block; margin-bottom: 4px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.en-text { font-size: 0.9em; color: #666; direction: ltr; display: block; text-align: left;}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Result Section */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#result-box { display: none; background-color: #e6fffa; border: 2px solid #2d3748; padding: 30px; text-align: center; margin-top: 30px; border-radius: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.score-large { font-size: 4em; font-weight: 800; color: #276749; margin: 10px 0; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn { display: block; width: 100%; padding: 18px; background-color: #1a73e8; color: white; border: none; font-size: 1.4em; font-weight: bold; border-radius: 8px; cursor: pointer; margin-top: 30px; transition: background 0.3s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn:hover { background-color: #1557b0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.reset-btn { background-color: #718096; margin-top: 15px; font-size: 1em; padding: 15px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.reset-btn:hover { background-color: #4a5568; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Print styles */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media print {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn, .reset-btn { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { background-color: white; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card { box-shadow: none; border: 1px solid #ccc; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Oswestry Disability Index (ODI)&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;مقياس أوسويستري للإعاقة&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;form id="odiForm"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card" style="border-right: 5px solid #1a73e8;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label style="font-weight:bold; font-size:1.2em;"&gt;Patient Name / اسم المريض (Optional)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" class="input-field" placeholder="Enter name here..."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;1. Pain Intensity &lt;span class="en-text" style="display:inline; float:left;"&gt; / شدة الألم&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q1" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;لا أشعر بأي ألم حالياً&lt;/span&gt;&lt;span class="en-text"&gt;I have no pain at the moment&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q1" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم خفيف جداً حالياً&lt;/span&gt;&lt;span class="en-text"&gt;The pain is very mild at the moment&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q1" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم متوسط حالياً&lt;/span&gt;&lt;span class="en-text"&gt;The pain is moderate at the moment&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q1" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم شديد إلى حد ما حالياً&lt;/span&gt;&lt;span class="en-text"&gt;The pain is fairly severe at the moment&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q1" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم شديد جداً حالياً&lt;/span&gt;&lt;span class="en-text"&gt;The pain is very severe at the moment&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q1" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم هو الأسوأ على الإطلاق ولا أستطيع تحمله&lt;/span&gt;&lt;span class="en-text"&gt;The pain is the worst imaginable at the moment&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;2. Personal Care &lt;span class="en-text" style="display:inline; float:left;"&gt; / العناية الشخصية&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q2" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع الاعتناء بنفسي بشكل طبيعي دون ألم&lt;/span&gt;&lt;span class="en-text"&gt;I can look after myself normally without causing extra pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q2" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع الاعتناء بنفسي بشكل طبيعي ولكنه مؤلم جداً&lt;/span&gt;&lt;span class="en-text"&gt;I can look after myself normally but it causes extra pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q2" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;من المؤلم الاعتناء بنفسي وأنا بطيء وحذر&lt;/span&gt;&lt;span class="en-text"&gt;It is painful to look after myself and I am slow and careful&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q2" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أحتاج إلى بعض المساعدة ولكنني أدبر معظم أموري&lt;/span&gt;&lt;span class="en-text"&gt;I need some help but manage most of my personal care&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q2" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أحتاج إلى مساعدة كل يوم في معظم جوانب العناية الذاتية&lt;/span&gt;&lt;span class="en-text"&gt;I need help every day in most aspects of self-care&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q2" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;لا أرتدي ملابسي، أغتسل بصعوبة وأبقى في السرير&lt;/span&gt;&lt;span class="en-text"&gt;I do not get dressed, I wash with difficulty and stay in bed&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;3. Lifting &lt;span class="en-text" style="display:inline; float:left;"&gt; / حمل الأوزان&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q3" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع رفع الأوزان الثقيلة دون ألم إضافي&lt;/span&gt;&lt;span class="en-text"&gt;I can lift heavy weights without extra pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q3" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع رفع الأوزان الثقيلة ولكن ذلك يسبب ألماً إضافياً&lt;/span&gt;&lt;span class="en-text"&gt;I can lift heavy weights but it gives extra pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q3" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;يمنعني الألم من رفع الأوزان الثقيلة عن الأرض&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me from lifting heavy weights off the floor&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q3" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع رفع الأوزان الخفيفة والمتوسطة من مكان مناسب&lt;/span&gt;&lt;span class="en-text"&gt;I can manage if they are conveniently positioned&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q3" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع رفع الأوزان الخفيفة جداً فقط&lt;/span&gt;&lt;span class="en-text"&gt;I can lift only very light weights&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q3" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;لا أستطيع رفع أو حمل أي شيء على الإطلاق&lt;/span&gt;&lt;span class="en-text"&gt;I cannot lift or carry anything at all&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;4. Walking &lt;span class="en-text" style="display:inline; float:left;"&gt; / المشي&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q4" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم لا يمنعني من المشي لأي مسافة&lt;/span&gt;&lt;span class="en-text"&gt;Pain does not prevent me walking any distance&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q4" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من المشي لأكثر من 1.6 كم&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me walking more than 1 mile&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q4" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من المشي لأكثر من 400 متر&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me walking more than 1/4 mile&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q4" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من المشي لأكثر من 100 متر&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me walking more than 100 yards&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q4" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع المشي فقط باستخدام عكاز أو عصا&lt;/span&gt;&lt;span class="en-text"&gt;I can only walk using a stick or crutches&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q4" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أنا طريح الفراش معظم الوقت&lt;/span&gt;&lt;span class="en-text"&gt;I am in bed most of the time and have to crawl to the toilet&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;5. Sitting &lt;span class="en-text" style="display:inline; float:left;"&gt; / الجلوس&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q5" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع الجلوس على أي كرسي طالما أحببت&lt;/span&gt;&lt;span class="en-text"&gt;I can sit in any chair as long as I like&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q5" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع الجلوس في كرسيي المفضل طالما أحببت&lt;/span&gt;&lt;span class="en-text"&gt;I can sit in my favorite chair as long as I like&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q5" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من الجلوس لأكثر من ساعة واحدة&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me sitting more than 1 hour&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q5" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من الجلوس لأكثر من نصف ساعة&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me sitting more than 1/2 hour&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q5" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من الجلوس لأكثر من 10 دقائق&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me sitting more than 10 minutes&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q5" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من الجلوس نهائياً&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me from sitting at all&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;6. Standing &lt;span class="en-text" style="display:inline; float:left;"&gt; / الوقوف&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q6" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع الوقوف طالما أردت دون ألم إضافي&lt;/span&gt;&lt;span class="en-text"&gt;I can stand as long as I want without extra pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q6" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع الوقوف طالما أردت ولكن ذلك يزيد الألم&lt;/span&gt;&lt;span class="en-text"&gt;I can stand as long as I want but it gives extra pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q6" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من الوقوف لأكثر من ساعة&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me standing more than 1 hour&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q6" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من الوقوف لأكثر من نصف ساعة&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me standing more than 30 mins&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q6" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من الوقوف لأكثر من 10 دقائق&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me standing more than 10 mins&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q6" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من الوقوف نهائياً&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me from standing at all&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;7. Sleeping &lt;span class="en-text" style="display:inline; float:left;"&gt; / النوم&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q7" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أنام جيداً ولا يوقظني الألم أبداً&lt;/span&gt;&lt;span class="en-text"&gt;I sleep well and never wake up from pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q7" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أنام جيداً ولكن الألم يوقظني أحياناً&lt;/span&gt;&lt;span class="en-text"&gt;I sleep well but occasionally wake up from pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q7" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أنام أقل من 6 ساعات بسبب الألم&lt;/span&gt;&lt;span class="en-text"&gt;Because of pain I sleep less than 6 hours&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q7" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أنام أقل من 4 ساعات بسبب الألم&lt;/span&gt;&lt;span class="en-text"&gt;Because of pain I sleep less than 4 hours&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q7" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أنام أقل من ساعتين بسبب الألم&lt;/span&gt;&lt;span class="en-text"&gt;Because of pain I sleep less than 2 hours&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q7" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من النوم نهائياً&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me from sleeping at all&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;8. Social Life &lt;span class="en-text" style="display:inline; float:left;"&gt; / الحياة الاجتماعية&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q8" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;حياتي الاجتماعية طبيعية ولا تسبب لي ألماً&lt;/span&gt;&lt;span class="en-text"&gt;My social life is normal and gives me no extra pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q8" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;حياتي الاجتماعية طبيعية ولكنها تزيد من درجة الألم&lt;/span&gt;&lt;span class="en-text"&gt;My social life is normal but increases the degree of pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q8" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم لا يؤثر علي سوى في الهوايات النشطة (كالرياضة)&lt;/span&gt;&lt;span class="en-text"&gt;Pain has no significant effect except limiting energetic interests&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q8" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم قيد حياتي الاجتماعية وأخرج قليلاً جداً&lt;/span&gt;&lt;span class="en-text"&gt;Pain has restricted my social life and I do not go out as often&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q8" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم قيد حياتي الاجتماعية للمنزل فقط&lt;/span&gt;&lt;span class="en-text"&gt;Pain has restricted my social life to my home&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q8" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;ليس لدي حياة اجتماعية بسبب الألم&lt;/span&gt;&lt;span class="en-text"&gt;I have no social life because of pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;9. Traveling &lt;span class="en-text" style="display:inline; float:left;"&gt; / السفر والتنقل&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q9" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع السفر لأي مكان دون ألم&lt;/span&gt;&lt;span class="en-text"&gt;I can travel anywhere without pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q9" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أستطيع السفر لأي مكان ولكن ذلك يسبب ألماً زائداً&lt;/span&gt;&lt;span class="en-text"&gt;I can travel anywhere but it gives extra pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q9" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم سيء ولكنني أستطيع السفر لمدة تزيد عن ساعتين&lt;/span&gt;&lt;span class="en-text"&gt;Pain is bad but I manage journeys over 2 hours&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q9" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من السفر لأكثر من ساعة واحدة&lt;/span&gt;&lt;span class="en-text"&gt;Pain restricts me to journeys of less than 1 hour&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q9" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من السفر لأكثر من 30 دقيقة&lt;/span&gt;&lt;span class="en-text"&gt;Pain restricts me to short necessary journeys under 30 mins&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q9" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;الألم يمنعني من السفر إلا لتلقي العلاج بسيارة إسعاف&lt;/span&gt;&lt;span class="en-text"&gt;Pain prevents me from traveling except to receive treatment&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;10. Employment/Home &lt;span class="en-text" style="display:inline; float:left;"&gt; / العمل والمنزل&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q10" value="0"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أقوم بعملي/واجباتي المنزلية بشكل طبيعي دون ألم&lt;/span&gt;&lt;span class="en-text"&gt;Normal work/housework without extra pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q10" value="1"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أقوم بعملي بشكل طبيعي ولكن الألم يزيد&lt;/span&gt;&lt;span class="en-text"&gt;Normal work/housework but it increases pain&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q10" value="2"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أقوم بمعظم واجباتي ولكن لا أستطيع القيام بالأعمال الشاقة&lt;/span&gt;&lt;span class="en-text"&gt;I can perform most duties but pain prevents stressful activities&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q10" value="3"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;لا أستطيع القيام بأي شيء يسبب التوتر الجسدي&lt;/span&gt;&lt;span class="en-text"&gt;I cannot do anything that is physically stressful&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q10" value="4"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;أقوم بمهام خفيفة فقط&lt;/span&gt;&lt;span class="en-text"&gt;I can do only light duties&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q10" value="5"&gt; &lt;div&gt;&lt;span class="ar-text"&gt;لا أستطيع القيام بأي عمل أو واجب منزلي&lt;/span&gt;&lt;span class="en-text"&gt;I cannot do any work or housework&lt;/span&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="button" class="btn" onclick="calculateODI()"&gt;Calculate Score / احسب النتيجة&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="button" class="btn reset-btn" onclick="resetForm()"&gt;New Patient / مريض جديد&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="result-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;ODI Score Result&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-large" id="score-display"&gt;0%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p id="category-display" style="font-weight:bold; font-size:1.4em; color:#2d3748;"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="color:#555"&gt;Raw Score: &lt;span id="raw-score"&gt;0&lt;/span&gt; / &lt;span id="max-score"&gt;50&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function calculateODI() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var totalScore = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var questionsAnswered = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (var i = 1; i &lt;= 10; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var radios = document.getElementsByName('q' + i);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (var j = 0; j &lt; radios.length; j++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (radios[j].checked) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>totalScore += parseInt(radios[j].value);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>questionsAnswered++;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (questionsAnswered === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert("Please answer the questions first. / الرجاء الإجابة على الأسئلة أولاً");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>var maxPossibleScore = questionsAnswered * 5;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var percentage = (totalScore / maxPossibleScore) * 100;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>percentage = Math.round(percentage);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>var category = "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var arCategory = "";</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (percentage &lt;= 20) { category = "Minimal Disability"; arCategory = "إعاقة طفيفة"; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if (percentage &lt;= 40) { category = "Moderate Disability"; arCategory = "إعاقة متوسطة"; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if (percentage &lt;= 60) { category = "Severe Disability"; arCategory = "إعاقة شديدة"; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if (percentage &lt;= 80) { category = "Crippled"; arCategory = "إعاقة مقعدة"; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else { category = "Bed-bound"; arCategory = "طريح الفراش"; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('score-display').innerText = percentage + "%";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('category-display').innerText = category + " - " + arCategory;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('raw-score').innerText = totalScore;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('max-score').innerText = maxPossibleScore;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('result-box').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.scrollTo(0, document.body.scrollHeight);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function resetForm() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(confirm("Start new patient? / مسح البيانات والبدء من جديد؟")) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("odiForm").reset();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('result-box').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>window.scrollTo(0, 0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
